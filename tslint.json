@@ -1,0 +1,18 @@
+{
+	"rulesDirectory": [],
+	"rules": {
+		"class-name": true,
+		"comment-format": [true, "check-space"],
+		"no-duplicate-variable": true,
+		"no-eval": true,
+		"no-internal-module": true,
+		"no-var-keyword": true,
+		"no-console": true,
+		"triple-equals": [true, "allow-null-check"],
+		"variable-name": [true, "ban-keywords", "allow-leading-underscore"]
+	},
+	"awesomeTypescriptLoaderOptions": {
+		"silent": true
+	},
+	"extends": ["tslint-config-prettier"]
+}

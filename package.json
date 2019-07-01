@@ -1,0 +1,67 @@
+{
+	"name": "InjectableFormik",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "https://github.com/nicholasfay/InjectableFormik.git",
+	"author": "nicholasfay <nicholas.fay5@gmail.com>",
+	"license": "MIT",
+	"devDependencies": {
+		"@babel/core": "^7.4.5",
+		"@babel/preset-env": "^7.4.5",
+		"@babel/preset-react": "^7.0.0",
+		"awesome-typescript-loader": "^5.2.1",
+		"babel-core": "^6.26.3",
+		"babel-loader": "^8.0.6",
+		"css-loader": "^1.0.1",
+		"husky": "^2.7.0",
+		"jest": "^24.8.0",
+		"lint": "^0.7.0",
+		"lint-staged": "^8.2.1",
+		"prettier": "^1.18.2",
+		"react-docgen-typescript-loader": "^3.1.0",
+		"react-docgen-typescript-webpack-plugin": "^1.1.0",
+		"storybook-addon-jsx": "^7.1.2",
+		"ts-jest": "^24.0.2",
+		"ts-loader": "^6.0.4",
+		"tslint": "^5.18.0",
+		"tslint-config-prettier": "^1.18.0",
+		"typescript": "^3.5.2",
+		"typings-for-css-modules-loader": "^1.7.0",
+		"webpack": "^4.35.0",
+		"webpack-cli": "^3.3.5",
+		"webpack-dev-server": "^3.7.2"
+	},
+	"dependencies": {
+		"@storybook/addon-info": "^5.1.9",
+		"@storybook/addon-knobs": "^5.1.9",
+		"@storybook/react": "^5.1.9",
+		"@types/jest": "^24.0.15",
+		"@types/react": "^16.8.22",
+		"@types/react-dom": "^16.8.4",
+		"@types/storybook__react": "^4.0.2",
+		"formik": "^1.5.7"
+	},
+	"scripts": {
+		"storybook": "start-storybook -p 6006 -c .storybook",
+		"dev": "webpack-dev-server --mode development --hot --inline",
+		"husky": "lint-staged",
+		"lint": "tslint 'src/**/*.ts?(x)'",
+		"prettier": "prettier --write 'src/**/*.ts?(x)'",
+		"test": "jest"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "yarn run husky"
+		}
+	},
+	"lint-staged": {
+		"*.ts?": [
+			"yarn run prettier",
+			"yarn run lint"
+		]
+	},
+	"peerDependencies": {
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6"
+	}
+}
